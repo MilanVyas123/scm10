@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#container},~{::title},~{::script})}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <!-- pagination script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+      // Get all elements with the class "about"
+      let links = document.getElementsByClassName("services");
+
+      // Loop through each element and add the desired class
+      for (let i = 0; i < links.length; i++) {
+        // Add the class to the current element
+        links[i].classList.add(
+          "block",
+          "py-2",
+          "px-3",
+          "text-white",
+          "bg-blue-700",
+          "rounded",
+          "md:bg-transparent",
+          "md:text-blue-700",
+          "md:p-0",
+          "dark:text-white",
+          "md:dark:text-blue-500"
+        );
+      }
+    </script>
+  </body>
+</html>
